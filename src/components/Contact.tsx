@@ -3,10 +3,10 @@ import useScrollReveal from '../hooks/useScrollReveal';
 import { Send, Facebook, Instagram, Linkedin, Github } from 'lucide-react';
 
 const socials = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Github, href: '#', label: 'GitHub' },
+  { icon: Facebook, href: 'https://www.facebook.com/aaditya.belbase.377080', label: 'Facebook' },
+  { icon: Instagram, href: 'https://www.instagram.com/aadi_tya5567/', label: 'Instagram' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/aaditya-belbase-aa8768304/', label: 'LinkedIn' },
+  { icon: Github, href: 'https://github.com/Aadityabelbase13', label: 'GitHub' },
 ];
 
 const Contact = () => {
@@ -75,7 +75,14 @@ const Contact = () => {
             {/* Social icons */}
             <div className="flex justify-center gap-3 mt-10">
               {socials.map((s) => (
-                <a key={s.label} href={s.href} aria-label={s.label} className="social-icon">
+                
+                <a  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="social-icon"
+                >
                   <s.icon size={18} className="text-muted-foreground" />
                 </a>
               ))}

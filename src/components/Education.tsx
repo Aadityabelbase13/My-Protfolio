@@ -6,16 +6,16 @@ const timelineData = [
   {
     icon: School,
     title: 'SEE (School Level)',
-    subtitle: 'School Leaving Certificate',
+    subtitle: 'Kanti Secondary School',
     description: 'Completed secondary education with strong foundations in science and mathematics.',
-    status: 'Completed',
+    status: 'Completed, GPA: 3.25/4.0',
   },
   {
     icon: BookOpen,
     title: '+2 Science',
-    subtitle: 'Higher Secondary Education',
+    subtitle: 'Kanti Secondary School',
     description: 'Studied science stream with a focus on physics, mathematics, and computer science.',
-    status: 'Completed',
+    status: 'Completed, GPA: 3.12/4.0',
   },
   {
     icon: GraduationCap,

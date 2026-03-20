@@ -5,7 +5,7 @@ const technicalSkills = [
   { name: 'HTML & CSS', level: 90 },
   { name: 'JavaScript', level: 75 },
   { name: 'React', level: 55 },
-  { name: 'C Programming', level: 65 },
+  { name: 'C Programming', level: 85 },
   { name: 'Unity', level: 45 },
 ];
 

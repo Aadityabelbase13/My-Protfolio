@@ -81,7 +81,7 @@ const Hero = () => {
                 <Flame size={16} />
                 View Projects
               </a>
-              <a href="#resume" className="hero-outline-btn inline-flex items-center gap-2 text-sm">
+              <a href="#resume" className="inline-flex items-center gap-2 text-sm px-6 py-3 rounded-full border-2 border-accent text-accent hover:bg-accent hover:text-black font-medium transition-all duration-300 active:scale-95">
                 <FileText size={16} />
                 View Resume
               </a>
