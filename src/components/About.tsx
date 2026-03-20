@@ -58,7 +58,7 @@ const About = () => {
             <div className="glass rounded-2xl p-8">
               <h3 className="font-heading text-xl font-semibold mb-4">Who I Am</h3>
               <p className="text-muted-foreground leading-relaxed mb-4" style={{ textWrap: 'pretty' }}>
-                I'm Aaditya Belbase — a web developer and graphic designer driven by a passion for crafting beautiful, functional digital products.
+                I'm Aaditya Belbase — a web developer, graphic designer, app developer, and 3D designer driven by a passion for crafting beautiful, functional digital products.
               </p>
               <p className="text-muted-foreground leading-relaxed" style={{ textWrap: 'pretty' }}>
                 My focus lies at the intersection of clean code and striking visuals. I believe great design is invisible — it just works. From responsive websites to brand identities, I bring ideas to life with precision and creativity.
