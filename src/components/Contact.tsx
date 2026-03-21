@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
 import { Send, Facebook, Instagram, Linkedin, Github } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const socials = [
   { icon: Facebook, href: 'https://www.facebook.com/aaditya.belbase.377080', label: 'Facebook' },
@@ -11,13 +12,27 @@ const socials = [
 
 const Contact = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const visible = useScrollReveal(sectionRef, 0.15);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+
+    emailjs.sendForm(
+      'service_hbddcho',
+      'template_vyk78su',
+      formRef.current!,
+      'ficpadDz5WAAzHLMC'
+    ).then(() => {
+      setSubmitted(true);
+      formRef.current?.reset();
+      setTimeout(() => setSubmitted(false), 3000);
+    }).catch(() => {
+      setError(true);
+      setTimeout(() => setError(false), 3000);
+    });
   };
 
   return (
@@ -32,11 +47,12 @@ const Contact = () => {
 
         <div className="max-w-2xl mx-auto">
           <div className={`glass rounded-3xl p-8 md:p-12 transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-sm font-medium mb-2 text-foreground">Name</label>
                 <input
                   type="text"
+                  name="name"
                   required
                   className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border/50 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-secondary/40 focus:border-secondary/50 transition-all duration-300"
                   placeholder="Your name"
@@ -46,6 +62,7 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2 text-foreground">Email</label>
                 <input
                   type="email"
+                  name="email"
                   required
                   className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border/50 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-secondary/40 focus:border-secondary/50 transition-all duration-300"
                   placeholder="your@email.com"
@@ -54,6 +71,7 @@ const Contact = () => {
               <div>
                 <label className="block text-sm font-medium mb-2 text-foreground">Message</label>
                 <textarea
+                  name="message"
                   required
                   rows={5}
                   className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border/50 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-secondary/40 focus:border-secondary/50 transition-all duration-300 resize-none"
@@ -64,7 +82,7 @@ const Contact = () => {
                 type="submit"
                 className="hero-glow-btn w-full inline-flex items-center justify-center gap-2 text-sm"
               >
-                {submitted ? 'Message Sent! ✓' : (
+                {submitted ? 'Message Sent! ✓' : error ? 'Failed! Try Again.' : (
                   <>
                     <Send size={16} /> Send Message
                   </>
@@ -76,7 +94,7 @@ const Contact = () => {
             <div className="flex justify-center gap-3 mt-10">
               {socials.map((s) => (
                 
-                <a  key={s.label}
+                 <a key={s.label}
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"

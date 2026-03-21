@@ -9,7 +9,7 @@ const projects = [
     tags: ['React', 'Tailwind', 'TypeScript'],
     category: 'Web',
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Aadityabelbase13/My-Protfolio',
   },
   {
     title: 'Weather App',
@@ -25,7 +25,7 @@ const projects = [
     tags: ['React', 'JavaScript', 'CSS'],
     category: 'Web',
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Aadityabelbase13/Tasky',
   },
   {
     title: 'CalcuMate',
@@ -33,7 +33,7 @@ const projects = [
     tags: ['Flutter', 'Dart'],
     category: 'Other',
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Aadityabelbase13/Calcumate-Calculator-App',
   },
   {
     title: 'Social Media Kit',
@@ -115,14 +115,18 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <a
-                    href={project.liveUrl}
+                  
+                  <a  href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-medium text-secondary hover:text-foreground transition-colors"
                   >
                     <ExternalLink size={13} /> Live Demo
                   </a>
-                  <a
-                    href={project.githubUrl}
+                  
+                   <a href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Github size={13} /> GitHub

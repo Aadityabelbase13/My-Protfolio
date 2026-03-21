@@ -34,9 +34,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Glass card behind content */}
           <div className="glass rounded-3xl p-8 md:p-14 relative overflow-hidden">
-            {/* Light sweep */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <div className="absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-secondary/5 to-transparent animate-light-sweep" />
             </div>
@@ -60,10 +58,10 @@ const Hero = () => {
               className="h-8 mb-6 opacity-0 animate-fade-up"
               style={{ animationDelay: '0.6s' }}
             >
-              <span className="text-secondary font-medium text-lg">
+              <span className="text-accent font-semibold text-lg">
                 {displayed}
               </span>
-              <span className="border-r-2 ml-0.5 animate-typing-cursor border-secondary">&nbsp;</span>
+              <span className="border-r-2 ml-0.5 animate-typing-cursor border-accent">&nbsp;</span>
             </div>
 
             <p
@@ -81,18 +79,20 @@ const Hero = () => {
                 <Flame size={16} />
                 View Projects
               </a>
-              <a href="#resume" className="inline-flex items-center gap-2 text-sm px-6 py-3 rounded-full border-2 border-accent text-accent hover:bg-accent hover:text-black font-medium transition-all duration-300 active:scale-95">
+              <button
+                onClick={() => window.open('/resume.png', '_blank')}
+                className="inline-flex items-center gap-2 text-sm px-6 py-3 rounded-full border-2 border-accent text-accent hover:bg-accent hover:text-black font-medium transition-all duration-300 active:scale-95"
+              >
                 <FileText size={16} />
                 View Resume
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <a
-        href="#about"
+      
+       <a href="#about"
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
       >
         <span className="text-xs tracking-widest uppercase">Scroll</span>
