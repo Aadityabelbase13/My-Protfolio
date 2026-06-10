@@ -92,7 +92,7 @@
     "vitest": "^3.2.4"
   },
 
-  "engines": {
-    "node": "18.x"
-  }
+ "engines": {
+  "node": ">=20"
+}
 }
