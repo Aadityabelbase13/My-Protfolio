@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Weather App',
     description: 'A clean weather application with real-time forecasts, location search, and beautiful UI design.',
-    tags: ['Figma', 'HTML', 'CSS', 'JavaScript'],
+    tags: [ 'HTML', 'CSS', 'JavaScript'],
     category: 'Web',
     liveUrl: '#',
     githubUrl: 'https://github.com/Aadityabelbase13/Weather-App',
@@ -43,7 +43,7 @@ description: "A modern flip clock timer with smooth animations, minimal design, 
     githubUrl: 'https://github.com/Aadityabelbase13/flip-clock-timer',
   },
   {
-    title: '2D Platformer Game',
+    title: '2D Platformer Game(On progress)',
     description: 'A fun platformer game built with Unity, featuring custom sprites and level design.',
     tags: ['Unity', 'C#', 'Game Design'],
     category: 'Other',
