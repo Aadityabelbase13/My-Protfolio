@@ -37,7 +37,8 @@ const projects = [
   },
   {
     title: 'Flip Clock Timer',
-description: "A modern flip clock timer with smooth animations, minimal design, and precise time tracking for productivity and focus sessions.",    tags: ['Photoshop', 'Figma'],
+description: "A modern flip clock timer with smooth animations, minimal design, and precise time tracking for productivity and focus sessions.",   
+ tags: ['Web'],
     category: 'Web',
     liveUrl: 'https://flipclocktimer.netlify.app/',
     githubUrl: 'https://github.com/Aadityabelbase13/flip-clock-timer',
